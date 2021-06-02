@@ -2,6 +2,10 @@
 &copy; 2021 Charles Pisciotta
 > A sample UIKit (iOS) app that allows a user to simply play locally stored audio files using [AudioKit](https://github.com/AudioKit/AudioKit).
 
+***
+This project was put together for my interview with <a href="https://www.soundmind.app/" target="_blank">SoundMind</a> before joining as an iOS Developer. The initial project requirements, some basic files, assets, and project skeleton were written and/or provided by SoundMind (Jack Zimmer and Jason Silberman). On receiving the project, I implemented all of the necessary files (i.e. audio playback, navigation, asset management, etc.), restructured the project, and added assets (i.e. the app icon and cover images for sounds).
+***
+
 This sample app displays a list of audio files that are stored locally. The home screen is a simple UITableViewController that lists the audio files as `SoundTableViewCell`s. Each cell contains the name of the audio file and a `PlayingIndicator`. The latter is highlighted when currently playing and, at any given time, only one indicator can be highlighted as only one file can play at once. At the start, no audio plays, so all indicators start unhighlighted and all remain unhighlighted when no audio is playing.
 
 On click of a `SoundTableViewCell`, a `PlayerViewController` is displayed modally. The `PlayerViewController` consists of the following UI elements: a background image consistent with the audio file, a large title at the top displaying the name of the audio file, and a button at the bottom allowing the user to play and pause the sound. When that specific audio file is playing, the button shows a pause icon; when that specific audio file is not playing, the button shows a play icon. Note, if an audio file is playing, only the modal view controller of that audio file will toggle the default button icon.
